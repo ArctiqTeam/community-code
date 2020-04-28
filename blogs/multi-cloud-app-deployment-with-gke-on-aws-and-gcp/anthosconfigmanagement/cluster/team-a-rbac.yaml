@@ -1,0 +1,14 @@
+apiVersion: rbacmanager.reactiveops.io/v1beta1
+kind: RBACDefinition
+metadata:
+  name: husker-test
+rbacBindings:
+  - name: team-a
+    subjects:
+      - kind: User
+        name: husker@arctiq.ca
+    roleBindings:
+      - namespace: np-test-1
+        clusterRole: edit
+      - namespace: hipster-store
+        clusterRole: read
