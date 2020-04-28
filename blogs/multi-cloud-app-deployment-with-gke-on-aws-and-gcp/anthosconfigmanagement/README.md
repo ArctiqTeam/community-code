@@ -43,7 +43,7 @@ spec:
   clusterName: my-cluster
   git:
     syncRepo: git@github.com:ArctiqTeam/community-source.git
-    syncBranch: "blog/multi-cloud-app-deployment-with-gke-on-aws-and-gcp"
+    syncBranch: "master"
     secretType: none
     policyDir: "blogs/multi-cloud-app-deployment-with-gke-on-aws-and-gcp/anthosconfigmanagement"
   # If true, namespaces in an abstract namespace share inherited
