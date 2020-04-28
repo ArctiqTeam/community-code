@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: strange-brew-configmap
+data:
+  index.html: |
+    <!doctype html>
+    <html>
+      <head>
+        <title>Strange Brew in Canada!</title>
+      </head>
+      <body>
+        <p><img src="https://cdn.canadianfilmday.ca/wp-content/uploads/StrangeBrew_1200x600.jpg"</p>
+      </body>
+    </html>
