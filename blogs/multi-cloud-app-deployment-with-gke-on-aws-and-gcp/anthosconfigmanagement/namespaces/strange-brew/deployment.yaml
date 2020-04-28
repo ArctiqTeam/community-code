@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strange-brew
+spec:
+  selector:
+    matchLabels:
+      app: strange-brew
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: strange-brew
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports: 
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /usr/share/nginx/html
+      volumes:
+        - name: config-volume
+          configMap:
+            name: strange-brew-configmap
