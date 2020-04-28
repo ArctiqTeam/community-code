@@ -6,7 +6,24 @@ This repository holds all of the manifests required for Anthos Config Management
 The layout of this directory is as follows: 
 
 ```shell
-[update tree]
+├── cluster
+│   ├── rbac-manager.yaml
+│   └── team-a-rbac.yaml
+├── clusterregistry
+├── namespaces
+│   ├── default
+│   │   └── namespace.yaml
+│   ├── kube-system
+│   │   └── namespace.yaml
+│   ├── np-test-1
+│   │   └── namespace.yml
+│   └── rbac-manager
+│       ├── deployment.yaml
+│       └── namespace.yaml
+├── README.md
+└── system
+    ├── config-management.yaml
+    └── resourcequota-hierarchy.yaml
 ```
 
 **Note** Please update this layout as required. 
@@ -26,8 +43,8 @@ spec:
   clusterName: my-cluster
   git:
     syncRepo: git@github.com:ArctiqTeam/community-source.git
-    syncBranch: blog/multi-cloud-app-deployment-with-gke-on-aws-and-gcp
-    secretType: ssh
+    syncBranch: "blog/multi-cloud-app-deployment-with-gke-on-aws-and-gcp"
+    secretType: none
     policyDir: "blogs/multi-cloud-app-deployment-with-gke-on-aws-and-gcp/anthosconfigmanagement"
   # If true, namespaces in an abstract namespace share inherited
   # ResourceQuotas in aggregate.
